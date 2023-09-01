@@ -1,0 +1,18 @@
+.members_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 397px;
+    height: max-content;
+    background: linear-gradient(75deg, rgba(19, 81, 168, 0.85) 10%, rgba(22, 46, 102, 0.85)), url(../../Images/cta-bg.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 30px;
+
+    p {
+        margin-bottom: 38px;
+    }
+}

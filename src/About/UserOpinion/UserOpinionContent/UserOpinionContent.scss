@@ -1,0 +1,133 @@
+.user_opinion {
+    width: 100%;
+    height: max-content;
+    padding: 100px 0;
+
+    .user_opinion_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 1170px;
+        height: max-content;
+        margin: 50px auto 0;
+
+        .slick-slide {
+            padding: 0 20px;
+        }
+
+        .left {
+            width: 500px;
+
+            .review_content {
+
+                p {
+                    font-size: 20px;
+                    color: #707070;
+                    margin-bottom: 15px;
+                    line-height: 1.5;
+
+                    svg {
+                        position: relative;
+                        top: 8px;
+                        margin-right: 5px;
+                    }
+                }
+                
+
+                .review_info {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    font-family: 'Open Sans', sans-serif;
+
+                    img {
+                        width: 62px;
+                        height: 62px;
+                        border-radius: 50% !important;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        h4 {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 19px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: grid;
+            grid-template-columns: repeat(2, max-content);
+            justify-content: center;
+            width: 50%;
+            gap: 30px;
+
+            .users_info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                width: 250px;
+                height: 150px;
+                box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.175)!important;
+
+                .counter {
+                    font-size: 30px !important;
+                    font-family: 'Montserrat', sans-serif;
+                    color: #000000;
+                }
+                
+                span {
+                    font-size: 15px;
+                    color: #707070;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 900px){
+    .user_opinion .user_opinion_container {
+        flex-direction: column;
+        padding: 0 20px;
+
+        .left, .right {
+            width: 100% !important;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+
+            .users_info {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1200px){
+    .user_opinion .user_opinion_container {
+        width: 100%;
+
+        .left {
+            width: 60%;
+        }
+
+        .right {
+            width: 40%;
+            .users_info {
+                width: 150px;
+            }
+        }
+    }
+}

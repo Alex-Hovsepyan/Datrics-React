@@ -1,0 +1,32 @@
+.client_logo {
+    width: 100%;
+    height: max-content;
+    padding: 100px 0;
+    background-color: #f4f4f4;
+
+    .client_logo_container {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        width: 1170px;
+        margin: 0 auto;
+    
+        img {
+            transition: transform 0.3s linear;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1200px){
+    .client_logo {
+        .client_logo_container {
+            width: 100%;
+            padding: 0 15px;
+            flex-wrap: wrap;
+        }
+    }
+}

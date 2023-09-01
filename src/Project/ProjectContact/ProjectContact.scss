@@ -1,0 +1,51 @@
+.project_contact {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 270px;
+    padding: 30px 0;
+    height: max-content;
+    background: linear-gradient(75deg, rgba(19, 81, 168, 0.85) 10%, rgba(22, 46, 102, 0.85)), url(../../Images/slider-img-2.jpg) no-repeat top center / cover fixed;
+
+    .project_contact_container {
+        text-align: left !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1170px;
+        height: max-content;
+        margin: 0 auto;
+
+
+        .title {
+            padding: 0 0 25px;
+            text-align: start;
+        }
+
+        button:hover {
+            background-color: #ffffff !important;
+            color: #162E67 !important;
+        }
+    }
+}
+
+@media screen and (max-width : 800px){
+    .project_contact {
+        .project_contact_container {
+            flex-direction: column;
+
+            .title {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1200px){
+    .project_contact {
+        .project_contact_container {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+}

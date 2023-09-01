@@ -1,0 +1,159 @@
+.members {
+    width: 100%;
+    height: max-content;
+    padding: 56px 0;
+
+    .members_container {
+        display: grid;
+        grid-template-columns: repeat(3, 380px);
+        grid-template-rows: repeat(2, 500px);
+        justify-content: center;
+        gap: 30px;
+        width: 1170px;
+        height: max-content;
+        margin: 40px auto 0;
+
+        .members_content {
+            position: relative;
+            background-color: #F4F4F4;
+            border-radius: 3px;
+
+            img {
+                width: 100%;
+                height: 380px;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+
+                h5 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 19px;
+                    margin-bottom: 5px;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+                
+                span {
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13.5px;
+                    font-weight: bold;
+                    color: #707070;
+                }
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-top: 10px;
+                    list-style: none;
+
+                }
+            }
+
+            .overlay {
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, #1351a8 2%, #162577 82%);
+                text-align: center;
+                transition: all 0.3s ease;
+                opacity: 0;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+
+                .info {
+                    top: 27%;
+                    position: absolute;
+
+                    * {
+                        color: #ffffff;
+                    }
+
+                    p {
+                        width: 75%;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+                        font-size: 13.5px;
+                        font-family: 'Open Sans', sans-serif;
+                    }
+
+                    ul li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background-color: #ffffff;
+                        cursor: pointer;
+
+                        &:hover svg path {
+                            fill: #1351a8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .members {
+        .members_container {
+            width: 100%;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, max-content);
+
+            .members_content {
+                width: 100%;
+                padding: 10px 0;
+
+                img {
+                    height: 500px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 601px) and (max-width : 791px) {
+    .members {
+        .members_container {
+            width: 100%;
+            grid-template-columns: repeat(2, 270px);
+            grid-template-rows: repeat(2, max-content);
+        }
+    }
+}
+
+@media screen and (min-width : 792px) and (max-width : 950px) {
+    .members {
+        .members_container {
+            width: 100%;
+            grid-template-columns: repeat(2, 360px);
+            grid-template-rows: repeat(2, max-content);
+        }
+    }
+}
+
+@media screen and (min-width : 951px) and (max-width : 1200px){
+    .members {
+        .members_container {
+            width: 100%;
+            grid-template-columns: repeat(3, 290px);
+            grid-template-rows: repeat(2, max-content);
+        }
+    }
+}

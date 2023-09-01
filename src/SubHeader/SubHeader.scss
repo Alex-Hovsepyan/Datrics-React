@@ -1,0 +1,33 @@
+.subheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(to right, rgba(19, 81, 168, 0.85) 10%, rgba(22, 46, 102, 0.85)), url('../Images/subheader.jpg');
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+        font-size: 45px;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
+
+    p {
+        font-size: 15px;
+        font-family: 'Open Sans', sans-serif;
+        color: #cecccc;
+    }
+
+    div {
+        position: absolute;
+        bottom: -5px;
+        width: 100%;
+        height: 100%;
+        background: url(../Images/hero-bottom-shape.svg) no-repeat center;
+    }
+}

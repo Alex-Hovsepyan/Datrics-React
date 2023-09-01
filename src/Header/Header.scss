@@ -1,0 +1,170 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 9999;
+    transition: all 0.3s ease;
+
+    .header_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1170px;
+        height: 60px;
+        margin: 0 auto;
+
+        .list {
+            display: flex;
+            list-style: none;
+            font-family: 'Montserrat', sans-serif;
+
+            li {
+                padding: 0 15px;
+                font-size: 14px;
+
+                &:hover a {
+                    color: #ffffff;
+                }
+                
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #CED1EE;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            .dropdown {
+                position: relative;
+
+                &:hover svg {
+                    color: #ffffff;
+                }
+
+                &:hover nav {
+                    position: absolute;
+                    width: 100%;
+                    top: 100%;
+                    left: 0;
+                    cursor: pointer;
+
+                    ul {
+                        display: block;
+                        width: 180px;
+                        height: max-content;
+                        margin-top: 15px;
+                        background-color: #ffffff;
+                        list-style: none;
+                        border-radius: 5px;
+                        opacity: 1;
+    
+                        li {
+                            padding: 10px 10px;
+                            transition: all 0.3s ease;
+                        
+                            a {
+                                font-size: 13px;
+                                color: #333333;
+                            }
+
+                            &:hover {
+                                background-color: #162e66;
+                                
+                                a {
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                svg {
+                    display: flex;
+                    font-size: 12px;
+                    margin: 0 0 4px 5px;
+                    color: #CED1EE;
+                    transition: all 0.3s ease;
+
+                    path {
+                        display: flex;
+                    }
+                }
+
+                ul {
+                    display: none;
+                }
+            }
+        }
+
+        .burger_menu {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width : 1200px){
+    .header {
+        .header_container {
+            width: 95%;
+        }
+    }
+}
+
+@media screen and (max-width : 850px){
+    .header {
+        .header_container {
+            .burger_menu {
+                display: block;
+                font-size: 25px;
+                color: #ffffff;
+                cursor: pointer;
+            }
+
+            .list {
+                display: none;
+            }
+        }
+    }
+
+    .header_open {
+        padding: 18px;
+        height: 400px;
+        background: linear-gradient(75deg, #1351a8 5%, #162e66) !important;
+
+        .header_container {
+            align-items: start;
+            width: 100%;
+            height: 100%;
+
+            .list {
+                width: 100%;
+                height: max-content;
+                position: absolute;
+                padding: 20px 6px;
+                top: 30px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+            
+                li {
+                    padding: 15px;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #162e66;
+                    }
+
+                    ul {
+                        margin-top: 0 !important;
+                        width: 100% !important;
+                        border-top-left-radius: 0 !important;
+                        border-top-right-radius: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}

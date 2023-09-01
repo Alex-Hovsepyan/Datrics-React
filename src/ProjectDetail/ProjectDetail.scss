@@ -1,0 +1,144 @@
+.project_detail {
+    width: 100%;
+    height: max-content;
+    padding: 100px 0;
+
+    .project_detail_container {
+        width: 1170px;
+        height: max-content;
+        margin: 0 auto;
+
+        .detail_info_container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+
+            img {
+                width: 730px;
+                height: 420px;
+            }
+
+            .detail_info {
+                .project_detail_content {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    width: 350px;
+                    height: 90px;
+                    margin-bottom: 20px;
+                    padding: 22.5px;
+                    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+                    border-left: solid 4px #1351a8;
+                    border-radius: 4px;
+
+                    h4   {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 19px;
+                        margin-bottom: 5px;
+                    }
+
+                    span {
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 15px;
+                        color: #707070;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .description {
+            margin-bottom: 50px;
+
+            h3 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                color: #707070;
+                font-weight: bold;
+                margin-bottom: 20px;
+                line-height: 1.8;
+            }
+        }
+
+        .offers {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+
+            ul {
+                list-style: none;
+            
+                li {
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                    font-family: 'Open Sans', sans-serif;
+                    color: #707070;
+                    font-weight: bold;
+
+                    svg {
+                        margin-right: 8px;
+                        color: #162e66;
+                    }
+
+                    strong {
+                        font-family: 'Montserrat', sans-serif;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 700px){
+    .project_detail .project_detail_container {
+        .detail_info_container .detail_info .project_detail_content {
+            width: 100%;
+            height: max-content;
+        }
+        .offers {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media screen and (max-width : 810px){
+    .project_detail .project_detail_container {
+        .detail_info_container {
+            width: 100% !important;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width : 990px){
+    .project_detail .project_detail_container {
+        .detail_info_container {
+            flex-direction: column;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .offers {
+            width: 100%;
+            gap: 20px;
+        }
+    }
+}
+
+@media screen and (max-width : 1200px){
+    .project_detail .project_detail_container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}

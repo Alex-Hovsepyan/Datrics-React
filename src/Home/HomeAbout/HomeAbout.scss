@@ -1,0 +1,125 @@
+.home_about {
+    width: 100%;
+    height: max-content;
+    background-color: #f4f4f4;
+
+    .home_about_container {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        width: 1170px;
+        height: max-content;
+        margin: 0 auto;
+        padding: 100px 0;
+
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 600px;
+            background: url(../../Images/slider-img-2.jpg) 15%;
+            background-size: cover;
+        }
+
+        .right {
+            width: 40%;
+
+            p {
+                color: #707070;
+                font-family: 'Montserrat', sans-serif;
+                line-height: 1.8;
+                font-size: 15px;
+                margin-bottom: 18px;
+            }
+
+            .title {
+                padding: 0;
+                text-align: left;
+
+                p {
+                    font-size: 15px;
+                    line-height: 1.8;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .category {
+                display: flex;
+                gap: 20px;
+                margin: 25px 0 15px;
+                list-style: none;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                color: #495057;
+
+                li {
+                    position: relative;
+                    padding-bottom: 5px;
+                    cursor: pointer;
+
+                    &::after {
+                        content: " ";
+                        position: absolute;
+                        left: 0;
+                        top: 25px;
+                        width: 50%;
+                        height: 2px;
+                        background-color: #00000033;
+                        transition: all 0.3s ease;
+                    }
+                }
+
+                .active_category {
+                    &::after {
+                        width: 100%;
+                        background-color: #1351a8;
+                    }
+                }
+            }
+
+            .history, .mission, .vision {
+                display: none;
+            }
+
+            .history, .vision {
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        padding-bottom: 15px;
+                        font-family: 'Open Sans', sans-serif;
+                        color: #707070;
+                        font-size: 15px;
+
+                        strong {
+                            font-family: 'Montserrat', sans-serif;
+                        }
+                    }
+                }
+            }
+
+            .active_item {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 990px){
+    .home_about .home_about_container {
+        flex-direction: column;
+        align-items: center;
+
+        .left, .right {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width : 1200px){
+    .home_about .home_about_container {
+        width: 100%;
+    }
+}
